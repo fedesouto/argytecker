@@ -1,0 +1,23 @@
+<div class="container">
+    {{#if tasks}}
+    {{#each tasks}}
+    <div class="card mt-1">
+    <div class="card-header">
+             {{client}}
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">{{title}}:</h5>
+        <p class="card-text">{{description}}</p>
+        {{#if done}}
+        <p class="card-text">Completado</p>
+        {{else}}
+        <form action="/api/tasks/{{_id}}" method="post">
+            <button type="submit" class="btn btn-success">
+            Marcar como hecho</button>
+        </form>
+        {{/if}}
+        </div>
+        </div>
+    {{/each}}
+    {{/if}}
+</div>
