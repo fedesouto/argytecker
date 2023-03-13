@@ -4,8 +4,8 @@ const TaskSchema = new Schema({
     client: {type: String},
     title: {type: String},
     description: {type: String},
-    done: {type: Boolean, default: false}
-})
+    done: {type: Boolean, default: false},
+}, {timestamps: true})
 
 const TaskModel = model('Task', TaskSchema)
 
