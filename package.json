@@ -2,15 +2,17 @@
   "name": "argytecker",
   "version": "1.0.0",
   "description": "Argytec dashboard",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "start": "node server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "connect-sqlite3": "^0.9.13",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
